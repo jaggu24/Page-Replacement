@@ -123,11 +123,12 @@ int main()
     }
     fclose(fptr);
     int out;
-    for(int i=4;i<=7;i++)
+    for(int i=3;i<=6;i++)
     {
         out=page_replacement(size,i,str);
-        printf("# of pagefault is %d\n",out);
+        printf("%d,",out);
     }
+    printf("\n");
     return 0;
 }
 /* void main()

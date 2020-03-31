@@ -118,10 +118,11 @@ int main()
 				pages_available[replace]=str[i];
 			}
 		}
-		printf("\n%d-pages   The hits are %d\nFaults are %d",pages_count,hits,faults);
+		printf("%d,",faults);
 		free(pages_available);							//Free theor memories
 		free(next_future);
 	}
+	printf("\n");
 	free(str);
 	return 0;
 }

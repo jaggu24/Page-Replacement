@@ -140,7 +140,8 @@ int main()
     for(int i=4;i<=7;i++)
     {
         out=page_replacement(i,size,str);
-        printf("# of pagefault is %d\n",out);
+        printf("%d,",out);
     }
+    printf("\n");
     return 0;
 }
