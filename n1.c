@@ -11,7 +11,8 @@ int main()
 		printf("No such file ");
 		return 2;
 	}
-	int a,size=20;
+	int a;
+	size_t size=20;
 	char *buf;
 	buf=(char *)malloc(size);
 	while(!feof(fptr))
