@@ -12,7 +12,7 @@ foreach $line (<r>)
 	my @y = split ",",$line;
 	foreach $elem (@y)
 	{
-		print $elem+=1,"\n";
+		# print $elem+=1,"\n";
 		push(@ans, int($elem));
 	}
 	$lines += 1;
@@ -26,47 +26,42 @@ for ($a = 0;$a < $lines;$a += 1)
 		push(@res, int(@ans[$b]));
 	}
 } 
-print(@res);
+# print(@res);
 # Closing the File 
 close(r); 
-my $save1 = "bars.jpeg";
+my $save1 = "bars2.jpeg";
 my $ist = 0;
 my $ied = $lines-1;
-for ($i = 0;$i < ($siz1 / $lines);$i += 1)
-{
-	if($i == 0)
-	{
-		$save1 = "FFlru.jpeg";
-		print "always"; 
-	}elsif($i == 1)
-	{
-		$save1 = "FFopt.jpeg";
-		print "i=1";
-	}elsif($i == 2)
-	{
-		print "i=2";
-		$save1 = "FFsec.jpeg";
-	}elsif($i == 3)
-	{
-		$save1 = "FFAdditional_bit.jpeg";
-	}
-	else
-	{
-		print "NO";
-	}
-	my @re2 = [@res[$ist .. $ied]];
-	my $chart = Chart::Gnuplot->new(
+my @x = qw(LRR OPT SECch ADDbit LFU MFU FIFO);
+my $chart = Chart::Gnuplot->new(
 		output => $save1,
-		xrange => [-1, 10],
+		title => "Algorithms and page faults",
+		ylabel => "Page Faults",
+		xlabel => "Algorithms",
+		# xrange => [-1, 10],
 		yrange => [0, 50],
 	);
+my @boxes = ();
+for ($i = 0;$i < ($siz1 / $lines);$i += 1)
+{
+	my $name;
+	if($i >= 0)
+	{
+		$name = $i + 3;
+		$save1 = $name."Frames.jpeg";
+		# print "always"; 
+	}
+	my @re2 = [@res[$ist .. $ied]];
 
-	my $boxes = Chart::Gnuplot::DataSet->new(
+	$boxes[$i] = Chart::Gnuplot::DataSet->new(
+		xdata => \@x,
 		ydata  => @re2,
-		style => "boxes",
+		style => "histograms",
+		title => $save1,
 	);
 
-	$chart->plot2d($boxes);
 	$ist += $lines;
 	$ied += $lines;
 }
+print "Done";
+$chart->plot2d(@boxes);
