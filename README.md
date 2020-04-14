@@ -24,6 +24,6 @@ Here FIFO and RAND alone shows Belady's Anomaly
 
 The Average of Both the results are give by
 
-![alt text](https://raw.githubusercontent.com/jaggu24/Page-Replacement/master/comparision/avgbar2.jpeg)
+![alt text](https://raw.githubusercontent.com/jaggu24/Page-Replacement/master/comparision/avg2.jpeg)
 
 ![alt text](https://raw.githubusercontent.com/jaggu24/Page-Replacement/master/comparision/avgfrms.jpeg)
