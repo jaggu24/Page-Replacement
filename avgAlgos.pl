@@ -12,7 +12,7 @@ my $chart = Chart::Gnuplot->new(
 	output => "avgfrms.jpeg",
 	title  => "Frames and faults",
 	xlabel => "No.of frames",
-	ylabel => "Page Fault",
+	ylabel => "Percentage of Hits",
 	yrange => [0, 100],
 );
 my @dataSet = ();
