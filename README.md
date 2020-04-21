@@ -31,3 +31,16 @@ The Average of Both the results are give by
 ![alt text](https://raw.githubusercontent.com/jaggu24/Page-Replacement/master/comparision/avgfrms.jpeg)
 
 *You can see than eventuall when number of frames are increased all algorithm tend to become optimum*
+
+## How to Run
+1. Type your inputs in r1.txt file
+2. Specify the appropriate start, end and increment size of frame in plotAlgos.pl
+3. use `perl plotAglos.pl` to plot the graphs of the input (You need to have gnuplot and imagemagic tools and their rights to execute this)
+4. Your output will be visible in output.txt and the graphs will be available in your current working directory
+5. Then use `perl plotFrames.pl` to see the other graph
+6. Change the name of the images.
+7. If you wish to calculate average hit percentage then
+  - Enter the other input (with same number of elements) in r1.txt
+  - Change file name to output22.txt in plotAlgos.pl and plotFrames.pl.
+  - Use `perl plotAlgos.pl` and `perl plotFrames'
+  - Use `perl avgAlgos.pl` and `perl avgFrames` to see the result of the average analysis
