@@ -40,7 +40,7 @@ The Average of Both the results are give by
 5. Then use `perl plotFrames.pl` to see the other graph
 6. Change the name of the images.
 7. If you wish to calculate average hit percentage then
-  - Enter the other input (with same number of elements) in r1.txt
+  - Enter the other input (with same number of elements) in r1.txt.
   - Change file name to output22.txt in plotAlgos.pl and plotFrames.pl.
   - Use `perl plotAlgos.pl` and `perl plotFrames'
-  - Use `perl avgAlgos.pl` and `perl avgFrames` to see the result of the average analysis
+  - Use `perl avgAlgos.pl` and `perl avgFrames` to see the result of the average analysis.
