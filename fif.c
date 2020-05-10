@@ -16,7 +16,7 @@ int checked(int *pages,int n,int element)
 int page_replacement(int size,int n,int *array)
 {
     int *pages,j=0,fault=0;
-    size_t size_page=size;
+    size_t size_page=n;
     pages=(int *)calloc(size_page,sizeof(int));
     for(int i=0;i<size;i++)
     {
